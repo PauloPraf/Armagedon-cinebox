@@ -1,0 +1,28 @@
+<div class="container-md" id="container-form-login">
+  <div class="row">
+    <div class="col-lg-8 col-md-6 col-sm-0">
+      <img src="assets/logo-grande.png" class="img-fluid" alt="Imagem responsiva" />
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="formulario-login">
+        <form (ngSubmit)="fazlogin()">
+          <div class="mb-3">
+            <label for="email-login" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email-login" name="email" [(ngModel)]="user.email" />
+          </div>
+          <div class="mb-3">
+            <label for="senha-login" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="senha-login" name="senha" [(ngModel)]="user.senha" />
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="manter-on" />
+            <label class="form-check-label" for="receber-newsletter">Manter Conectado</label>
+          </div>
+          <span class="w-100 d-flex justify-content-center">
+            <button class="btn btn-primary btn-lg" type="submit" id="btn-login">login</button>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

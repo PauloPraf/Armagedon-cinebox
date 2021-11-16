@@ -1,0 +1,72 @@
+<div class="container-md" id="container-form-login">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6"></div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="formulario-login">
+        <form (ngSubmit)="salvarFilme()">
+          <div class="mb-3">
+            <label for="nome-filme" class="form-label">Nome do Filme</label>
+            <input type="text" class="form-control" id="nome-filme" name="nome-filme" [(ngModel)]="novofilme.nome" />
+          </div>
+          <div class="mb-3">
+            <label for="lancamento" class="form-label">Data de lançamento </label>
+            <input type="number" class="form-control" id="lancamento" name="ano" [(ngModel)]="novofilme.ano" />
+          </div>
+
+          <div class="mb-3">
+            <label for="descricao" class="form-label">Sinopse</label>
+            <input type="text" class="form-control" id="descricao" name="sinopse" [(ngModel)]="novofilme.sinopse" />
+          </div>
+
+          <div class="mb-3">
+            <label for="nome-diretor" class="form-label">Nome do diretor</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nome-diretor"
+              name="nome-diretor"
+              [(ngModel)]="novofilme.diretor"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="data-nascimento" class="form-label">Data de nascimento</label>
+            <input type="number" class="form-control" id="data-nascimento" />
+          </div>
+          <span class="w-100 d-flex justify-content-center">
+            <button class="btn btn-primary btn-lg" type="submit" id="btn-registrar">Registrar</button>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12"></div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <table class="table table-dark table-striped" style="background: #373b3e;">
+        <thead>
+          <tr>
+            <th scope="col">Nome do filme</th>
+            <th scope="col">Diretor</th>
+            <th scope="col">Sinopse</th>
+            <th scope="col">Ano</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let filme of filmes">
+          <td>{{ filme?.nome }}</td>
+          <td>{{ filme.diretor}}</td>
+          <td>{{ filme?.sinopse }}</td>
+          <td>{{ filme?.ano }}</td>
+          <td><button type="button" class="btn btn-danger" (click)="editar(filme)">Editar</button></td>
+          <td><button type="button" class="btn btn-danger" (click)="excluirFilme(filme.id)">Excluir</button></td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!--<span *ngFor="let filme of filmes">
+  <h1>{{ filme?.nome }}</h1>
+</span> -->

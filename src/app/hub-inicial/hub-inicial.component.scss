@@ -25,11 +25,12 @@ p {
   color: rgb(110, 156, 141);
 }
 
-#btn-cadastar {
-  width: 75%;
-  background-color: #1d3266;
-  border-radius: 14px;
-  margin-bottom: 2%;
+#descricao {
+  height: 100px;
+}
+
+#btn-registrar {
+  width: 40%;
 }
 
 .form {
@@ -39,6 +40,6 @@ p {
   width: 50%;
 }
 
-.btn-link {
-  color: #0a1a47;
+.table table-dark{
+  background-color: #176553;
 }

@@ -7,8 +7,7 @@
   border-radius: 10px;
 }
 
-label,
-p {
+label {
   color: aliceblue;
 }
 
@@ -29,7 +28,6 @@ p {
   width: 75%;
   background-color: #1d3266;
   border-radius: 14px;
-  margin-bottom: 2%;
 }
 
 .form {
@@ -37,8 +35,4 @@ p {
   margin: 0 0 20px;
   padding: 10px 25px;
   width: 50%;
-}
-
-.btn-link {
-  color: #0a1a47;
 }

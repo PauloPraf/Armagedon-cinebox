@@ -17,6 +17,8 @@ export class LoginUsuariosComponent implements OnInit {
     let login;
     try {
       login = await this.service.fazLogin(this.user);
+      this.service.usuario =login.data;
+      console.log(this.service.usuario)
       await this.rota.navigateByUrl('HubInicial');
     } catch {
       this._snackBar.open('Email/senha incorretos', 'X', { duration: 3000 });

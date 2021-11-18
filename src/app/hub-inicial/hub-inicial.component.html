@@ -46,15 +46,19 @@
       <table class="table table-dark table-striped" style="background: #373b3e;">
         <thead>
           <tr>
+            <th scope="col">Favoritar</th>
+
             <th scope="col">Nome do filme</th>
             <th scope="col">Diretor</th>
             <th scope="col">Sinopse</th>
             <th scope="col">Ano</th>
             <th scope="col">Editar</th>
             <th scope="col">Excluir</th>
+
           </tr>
         </thead>
         <tbody *ngFor="let filme of filmes">
+          <td (click)="favoritar(filme)" style="font-size: 30px; cursor:pointer ;">{{ usuario.filmeFavorito?.id == filme.id? '⭐' : '☆' }}</td>
           <td>{{ filme?.nome }}</td>
           <td>{{ filme.diretor}}</td>
           <td>{{ filme?.sinopse }}</td>

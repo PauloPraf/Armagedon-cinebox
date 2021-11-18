@@ -6,9 +6,12 @@ import axios from 'axios';
   providedIn: 'root',
 })
 export class UsuarioService {
+  atualizar(usuario: Usuario) {
+    return axios.put('http://localhost:21262/usuarios', usuario)
+  }
   private urlCadastro = 'http://localhost:21262/cadastro';
   private urlLogin = 'http://localhost:21262/login';
-
+usuario: Usuario;
   constructor() {}
 
   salvaUsuario(usuario: Usuario) {
@@ -16,6 +19,7 @@ export class UsuarioService {
   }
 
   fazLogin(usuario: Usuario) {
+    this.usuario = usuario;
     return axios.post(this.urlLogin, usuario);
   }
 }

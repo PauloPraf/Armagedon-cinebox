@@ -11,8 +11,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class CadastroUsuarioComponent implements OnInit {
   usuario: Usuario;
-  confirmaEmail = ' ';
-  comfirmaSenha = ' ';
+  confirmaEmail = '';
+  comfirmaSenha = '';
 
   constructor(private router: Router, private service: UsuarioService, private _snackBar: MatSnackBar) {}
 
